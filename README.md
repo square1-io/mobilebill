@@ -5,7 +5,7 @@ AllPoints 2Bill API Specifications: http://bit.ly/1fTu6zb
 Example usage:
 
 ```
-#!php
+<?php
 use Square1\MobileBill\MobileBill;
 use Square1\MobileBill\Exception\AuthenticationError;
 use Square1\MobileBill\Exception\ConnectionError;
@@ -34,4 +34,5 @@ try {
 } catch (\Exception $e) {
     echo "General exception.. " . $e->getMessage() . " do something!";
 }
+
 ```
