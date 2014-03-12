@@ -1,5 +1,6 @@
 {
     "name": "square1/mobilebill",
+    "version": "1.0.0",
     "type": "library",
     "description": "2Bill PHP API Client",
     "keywords": ["2Bill","api","client"],
