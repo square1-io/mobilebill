@@ -1,11 +1,11 @@
-
 2Bill.ie PHP Api (v2.5) Client
 
 AllPoints 2Bill API Specifications: http://bit.ly/1fTu6zb
 
-```php
 Example usage:
 
+```
+#!php
 use Square1\MobileBill\MobileBill;
 use Square1\MobileBill\Exception\AuthenticationError;
 use Square1\MobileBill\Exception\ConnectionError;
