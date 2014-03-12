@@ -1,9 +1,0 @@
-/vendor
-.vagrant
-/nbproject/private/
-*.sublime-*
-.DS_Store
-.env*
-test.php
-composer.lock
-.gitignore
