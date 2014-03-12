@@ -29,6 +29,8 @@ try {
     echo "Number is invalid.. " . $e->getMessage() . " do something!";
 } catch (ConnectionError $e) {
     echo "Connection issue.. " . $e->getMessage() . " do something!";
+} catch (TransactionError $e) {
+    echo "Transaction issue.. " . $e->getMessage() . " do something!";
 } catch (\Exception $e) {
     echo "General exception.. " . $e->getMessage() . " do something!";
 }
