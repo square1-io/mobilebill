@@ -5,3 +5,5 @@
 .DS_Store
 .env*
 test.php
+composer.lock
+.gitignore
