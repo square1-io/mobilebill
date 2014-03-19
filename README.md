@@ -1,8 +1,13 @@
-2Bill.ie PHP Api (v2.5) Client
+# 2Bill.ie PHP Api (v2.5) Client
 
-AllPoints 2Bill API Specifications: http://bit.ly/1fTu6zb
+[![Build Status](https://travis-ci.org/square1-io/mobilebill.png?branch=master)](https://travis-ci.org/square1-io/mobilebill)
 
-Example usage:
+#### Api Docs
+
+AllPoints API Specifications: http://bit.ly/1fTu6zb
+
+
+#### Example
 
 ```
 <?php
