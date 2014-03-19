@@ -31,11 +31,6 @@
 namespace Square1\MobileBill;
 
 use Guzzle\Http\Client;
-use Square1\MobileBill\Exception\AuthenticationError;
-use Square1\MobileBill\Exception\ConnectionError;
-use Square1\MobileBill\Exception\InvalidNumber;
-use Square1\MobileBill\Exception\InvalidRequest;
-use Square1\MobileBill\Exception\TransactionError;
 
 /**
  * Request
