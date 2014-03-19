@@ -23,7 +23,7 @@
     "autoload": {
         "psr-4": {
             "Square1\\MobileBill\\": "src/",
-            "Square1\\MobileBill\\Tests\\": "tests/",
+            "Square1\\MobileBill\\Tests\\": "tests/"
         }
     }
 }
