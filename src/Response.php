@@ -57,15 +57,12 @@ class Response
     /**
      * Response Construtor
      *
-     * @param string $data The response string in xml format
+     * @param \SimpleXMLElement $data The response string in xml format
      */
-    public function __construct(string $data)
+    public function __construct(\SimpleXMLElement $data)
     {
         //Convert from XML string into array
         $this->data = json_decode(json_encode($data), true);
-
-        //Validate the data
-        $this->validate();
     }
 
     /**
