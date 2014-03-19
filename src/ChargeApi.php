@@ -2,7 +2,7 @@
 /**
  * MobileBill - 2Bill.ie PHP Api Client
  *
- * @author    Ciaran Maher <ciaran@square1.io>
+ * @author    Ciarán Maher <ciaran@square1.io>
  * @copyright 2014 Square1 Software Ltd. http://square1.io
  * @link      http://bit.ly/1fTu6zb
  * @package   MobileBill
@@ -40,7 +40,7 @@ namespace Square1\MobileBill;
  * @author  Ciaran Maher
  * @since   1.0.0
  */
-class Charge
+class ChargeApi
 {
     /**
      * The URL endpoint for this request

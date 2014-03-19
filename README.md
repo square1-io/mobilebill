@@ -6,7 +6,7 @@ Example usage:
 
 ```
 <?php
-use Square1\MobileBill\MobileBill;
+use Square1\MobileBill\Api;
 use Square1\MobileBill\Exception\AuthenticationError;
 use Square1\MobileBill\Exception\ConnectionError;
 use Square1\MobileBill\Exception\InvalidNumber;
@@ -15,7 +15,7 @@ use Square1\MobileBill\Exception\TransactionError;
 
 try {
     var_dump(
-        MobileBill::create('username', 'password')
+        Api::create('username', 'password')
             ->content('999999', 'The content description goes here')
             ->phone('35387123456')
             ->charge('100', 'This is a test transaction')
