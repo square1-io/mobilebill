@@ -105,7 +105,7 @@ class Api
         $request->set('USERNAME', $username);
         $request->set('PASSWORD', $password);
 
-        return new MobileBill($client, $request);
+        return new Api($client, $request);
     }
 
     /**
