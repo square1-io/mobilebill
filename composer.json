@@ -1,16 +1,19 @@
 {
     "name": "square1/mobilebill",
-    "version": "1.0.0",
-    "type": "library",
-    "description": "2Bill PHP API Client",
-    "keywords": ["2Bill","api","client"],
+    "description": "2Bill.ie PHP API Client.",
+    "keywords": [
+        "2Bill.ie",
+        "api",
+        "client"
+    ],
     "homepage": "https://bitbucket.org/square1/mobilebill",
     "license": "MIT",
     "authors": [
         {
             "name": "Ciaran Maher",
             "email": "ciaran@square1.io",
-            "homepage": "http://www.square1.io/"
+            "homepage": "http://www.square1.io/",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -18,6 +21,9 @@
         "guzzle/guzzle": "~3.7"
     },
     "autoload": {
-        "psr-4": {"Square1\\MobileBill\\": "src/"}
+        "psr-4": {
+            "Square1\\MobileBill\\": "src/",
+            "Square1\\MobileBill\\Tests\\": "tests/",
+        }
     }
 }

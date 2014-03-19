@@ -2,7 +2,7 @@
 /**
  * MobileBill - 2Bill.ie PHP Api Client
  *
- * @author    Ciaran Maher <ciaran@square1.io>
+ * @author    Ciarán Maher <ciaran@square1.io>
  * @copyright 2014 Square1 Software Ltd. http://square1.io
  * @link      http://bit.ly/1fTu6zb
  * @package   MobileBill
@@ -33,14 +33,14 @@ namespace Square1\MobileBill;
 use Guzzle\Http\Client;
 
 /**
- * MobileBill
+ * Api
  *
  * This is the main class that sets the inital auth settings.
  * It will build the request array and will trigger the API request.
  *
  * Example usage:
  * 
- * $charge = MobileBill::create('username', 'password')
+ * $charge = Api::create('username', 'password')
  *     ->content('999999', 'The content description goes here')
  *     ->phone('35387123456')
  *     ->charge('100', 'This is a test transaction')
@@ -50,7 +50,7 @@ use Guzzle\Http\Client;
  * @author  Ciaran Maher
  * @since   1.0.0
  */
-class MobileBill
+class Api
 {
     /**
      * The Base URL for the API
@@ -92,7 +92,7 @@ class MobileBill
      * @param string $username  The 2Bill username 
      * @param string $password  The 2Bill password
      *
-     * @return \Square1\MobileBill\MobileBill
+     * @return \Square1\MobileBill\Api
      */
     public static function create($username, $password)
     {
@@ -114,7 +114,7 @@ class MobileBill
      * @param int    $contentId          The content id
      * @param string $contentDescription The content description
      * 
-     * @return \Square1\MobileBill\MobileBill
+     * @return \Square1\MobileBill\Api
      */
     public function content($contentId, $contentDescription)
     {
@@ -131,7 +131,7 @@ class MobileBill
      * @param int $phoneNumber The 12 digit mobile number, ie '353871234567'
      * @param int $operatorId  The operator id (optional)
      *
-     * @return \Square1\MobileBill\MobileBill
+     * @return \Square1\MobileBill\Api
      */
     public function phone($phoneNumber, $operatorId = '')
     {
@@ -157,18 +157,20 @@ class MobileBill
      * @param int    $channel   The payment channel (default '1')
      * @param string $currency  The currecny code (default 'EUR')
      *
-     * @return \Square1\MobileBill\MobileBill
+     * @return \Square1\MobileBill\Api
      */
     public function charge($amount, $reference, $channel = '1', $currency = 'EUR')
     {
-        $charge = new Charge($this->request);
+        $charge = new ChargeApi($this->request);
 
-        $charge->create(array(
-            'TRANSACTIONAMOUNT' => $amount,
-            'REFERENCE'         => $reference,
-            'CHANNEL'           => $channel,
-            'CURRENCYCODE'      => $currency
-        ));
+        $charge->create(
+            array(
+                'TRANSACTIONAMOUNT' => $amount,
+                'REFERENCE'         => $reference,
+                'CHANNEL'           => $channel,
+                'CURRENCYCODE'      => $currency
+            )
+        );
 
         return $this;
     }
