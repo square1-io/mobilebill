@@ -137,13 +137,9 @@ class Api
     {
         $this->request->set('MSISDN', $phoneNumber);
 
-        //Auto lookup operator id if not set
-        if (empty($operatorId)) {
-            $this->request->set('ISVERIFYOPERATOR', '1');
-        } else {
-            //Set operator id and disable auth operator lookup
+        //Set operator id
+        if (!empty($operatorId)) {
             $this->request->set('OPERATORID', $operatorId);
-            $this->request->set('ISVERIFYOPERATOR', '0');
         }
 
         return $this;
